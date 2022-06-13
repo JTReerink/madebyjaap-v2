@@ -68,14 +68,30 @@ body {
     padding: 0px 10px;
 }
 
-.home {
+.sections {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#home {
     height: 100vh;
     background-color: black;
 }
 
-.about {
+#about {
     height: 100vh;
     background-color: gray;
+}
+
+#projects {
+    height: fit-content;
+    background-color: aqua;
+}
+
+#contact {
+    height: 50vh;
+    background-color: var(--blue);
 }
   
 @media screen and (max-height: 450px) {
