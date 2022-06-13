@@ -1,8 +1,12 @@
 # Portfolio site van Jaap Reerink
 
-## Inhoud
 
+## Ideeën voor style
 
+* background foto van home page random vanuit 'foto's van mij'.
+* Homepage background foto wisselt random na scrollen.
+* Alle delen van website hebben eigen parallax scrolling background foto.
+* Alle project blokken hebben eigen parallac scrolling background foto.
 
 ## Inspiraties
 
