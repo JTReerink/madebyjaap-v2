@@ -1,7 +1,7 @@
 :root{
     --blue: #22577aff;
     --light-blue: #38a3a5ff;
-    --green: #57cc99ff;
+    --green: #2BFFD1;
     --purple: #985f99ff;
     --orange: #fe5f55ff;
 }
@@ -12,6 +12,17 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: rgba(31, 31, 31);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-blue);
+    border-radius: 15px;
+}
+
 
 /* Sidenav */
 .sidenav {
@@ -32,6 +43,10 @@ body {
 .sidenav #nav-holder{
     background-color: var(--blue, #22577aff);
     height: fit-content;
+    right: -20px;
+    padding: 15px 25px 15px 0;
+    border-radius: 20px;
+    position: fixed;
 }
 .sidenav #nav-holder:last-of-type {
     margin-bottom: auto;
@@ -41,7 +56,8 @@ body {
     align-self: center;
 }
 .sidenav a {
-
+    text-align: right;
+    right: 0;
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
@@ -63,11 +79,8 @@ body {
     stroke: none;
 }
 
-.main {
-    margin-right: 160px;
-    padding: 0px 10px;
-}
 
+/* Content */
 .sections {
     display: flex;
     margin: 0;
@@ -84,9 +97,53 @@ body {
     background-color: gray;
 }
 
+
+/* Projects */
 #projects {
     height: fit-content;
-    background-color: aqua;
+    background-color: black;
+}
+
+.projectsholder {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+.projectItem {
+    position: relative;
+    height: 50vh;
+    width: 49.5vw;
+    padding: 0;
+    margin: 0;
+}
+
+#project1{
+    background-image: url("/media/Projects/Thigmo/ThigmoGarden.png");
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-y: 50%;
+}
+#project2 {
+    background-image: url("/media/Projects/Thigmo/feedback.png");
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-position-x: 100%;
+}
+#project3 {
+    background-image: url("/media/Projects/Thigmo/oag.png");
+
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-y: 50%;
 }
 
 #contact {
