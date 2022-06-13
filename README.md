@@ -3,10 +3,16 @@
 
 ## Ideeën voor style
 
+* Onepager
 * background foto van home page random vanuit 'foto's van mij'.
 * Homepage background foto wisselt random na scrollen.
 * Alle delen van website hebben eigen parallax scrolling background foto.
 * Alle project blokken hebben eigen parallac scrolling background foto.
+* In navigation;
+  - Alleen tekst van huidige plek op pagina
+  - on hover -> shows text
+* 
+
 ### Colors
 
 ![](https://via.placeholder.com/300x50/22577aff/ffffff.png?text=blue-sapphire) #22577aff; | Background<br>
