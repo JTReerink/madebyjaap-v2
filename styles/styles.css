@@ -1,5 +1,6 @@
 :root{
     --blue: #22577aff;
+    --blueRGB: 34, 87, 122, 0.5;
     --light-blue: #38a3a5ff;
     --green: #2BFFD1;
     --purple: #985f99ff;
@@ -41,7 +42,7 @@ body {
     align-items: flex-end;
 }
 .sidenav #nav-holder{
-    background-color: var(--blue, #22577aff);
+    background-color: rgba(var(--blueRGB));
     height: fit-content;
     right: -20px;
     padding: 15px 25px 15px 0;
@@ -79,7 +80,6 @@ body {
     stroke: none;
 }
 
-
 /* Content */
 .sections {
     display: flex;
@@ -107,28 +107,82 @@ body {
 .projectsholder {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
     margin: 0;
     padding: 0;
+    width: 100vw;
 }
-.projectItem {
+.projectItemLeft, .projectItemRight {
     position: relative;
-    height: 50vh;
+    display: flex;
+    height: 60vh;
     width: 49.5vw;
     padding: 0;
     margin: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+    align-items: flex-end;
 }
 
+/* .projectItemLeft {
+    box-shadow: 2px 2px 5px gray inset;
+    
+}
+.projectItemRight {
+    box-shadow: -2px 2px 5px gray inset;
+
+} */
+
+.projectsholder a {
+    color: var(--green);
+    text-decoration: none;
+}
+.projectsholder a:active {
+    text-decoration: none;
+}
+.projectsholder a:visited {
+    text-decoration: none;
+}
+.projectsholder h3 {
+    font-size: 2vw;
+    background-color: rgba(var(--blueRGB));
+    margin-bottom: -15px;
+    margin-left: -15px;
+    padding: 8px 10px 20px 20px;
+    width: fit-content;
+    border-radius: 20px;
+    box-shadow: 3px -2px 10px var(--blue)
+}
+
+
 #project1{
-    background-image: url("/media/Projects/Thigmo/ThigmoGarden.png");
+
+}
+#project1:hover {
+
+}
+#project2 {
+    background-image: url("/projecten/OAG/oag.png");
+
 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 50%;
+    background-position-x: 0;
     background-position-y: 50%;
 }
-#project2 {
-    background-image: url("/media/Projects/Thigmo/feedback.png");
+#project2:hover {
+    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("/projecten/OAG/oag.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-y: 50%;
+    background-position-x: -10%;
+}
+#project3 {
+    background-color: white;
+    background-image: url("/projecten/FeelingFeedback/feedback.png");
 
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -136,15 +190,35 @@ body {
     background-position: center;
     background-position-x: 100%;
 }
-#project3 {
-    background-image: url("/media/Projects/Thigmo/oag.png");
+#project3:hover {
+    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("/projecten/FeelingFeedback/feedback.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-y: 50%;
+    background-position-x: 110%;
+}
 
+#project4 {
+    background-image: url("/projecten/ThigmoGarden/ThigmoGarden.png");
 
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 50%;
+    background-position-x: 0;
     background-position-y: 50%;
 }
+#project4:hover {
+    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("/projecten/ThigmoGarden/ThigmoGarden.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-x: -10%;
+    background-position-y: 60%;
+}
+
+
+
 
 #contact {
     height: 50vh;
