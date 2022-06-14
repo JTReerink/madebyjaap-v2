@@ -180,7 +180,6 @@ body {
 #project2 {
     background-image: url("../projecten/OAG/oag.png");
 
-
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 50%;
@@ -201,16 +200,16 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 52%;
-    background-position: center;
     background-position-x: 103%;
+    background-position-y: 50%;
 }
 #project3:hover {
     background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("../projecten/FeelingFeedback/feedback.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 60%;
-    background-position-y: 50%;
-    background-position-x: 112%;
+    background-size: 58%;
+    background-position-x: 110%;
+    background-position-y: 55%;
 }
 
 #project4 {
