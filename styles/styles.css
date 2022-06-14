@@ -87,9 +87,28 @@ body {
     padding: 0;
 }
 
+
 #home {
     height: 100vh;
     background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+#home #title {
+    position: absolute;
+    font-size: 8vw;
+    color: white;
+    text-align: center;
+    width: 99vw;
+    margin-top: 0;
+}
+
+#home #subtitle {
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 99vw;
+    margin-top: 100px;
 }
 
 #about {
@@ -101,19 +120,22 @@ body {
 /* Projects */
 #projects {
     height: fit-content;
-    background-color: black;
+    background-color: var(--light-blue);
 }
 
 .projectsholder {
+    position: relative;
     list-style: none;
     display: flex;
+    flex: 0 1 auto;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
     margin: 0;
     padding: 0;
     width: 100vw;
+
 }
-.projectItemLeft, .projectItemRight {
+.projectItem {
     position: relative;
     display: flex;
     height: 60vh;
@@ -123,16 +145,9 @@ body {
     overflow: hidden;
     transition: all 1s ease;
     align-items: flex-end;
+    box-shadow: 0px 0px 15px 6px var(--blue) inset;
 }
 
-/* .projectItemLeft {
-    box-shadow: 2px 2px 5px gray inset;
-    
-}
-.projectItemRight {
-    box-shadow: -2px 2px 5px gray inset;
-
-} */
 
 .projectsholder a {
     color: var(--green);
@@ -163,7 +178,7 @@ body {
 
 }
 #project2 {
-    background-image: url("/projecten/OAG/oag.png");
+    background-image: url("../projecten/OAG/oag.png");
 
 
     background-attachment: fixed;
@@ -173,7 +188,7 @@ body {
     background-position-y: 50%;
 }
 #project2:hover {
-    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("/projecten/OAG/oag.png");
+    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("../projecten/OAG/oag.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 60%;
@@ -181,40 +196,39 @@ body {
     background-position-x: -10%;
 }
 #project3 {
-    background-color: white;
-    background-image: url("/projecten/FeelingFeedback/feedback.png");
+    background-image: url("../projecten/FeelingFeedback/feedback.png");
 
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 52%;
     background-position: center;
-    background-position-x: 100%;
+    background-position-x: 103%;
 }
 #project3:hover {
-    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("/projecten/FeelingFeedback/feedback.png");
+    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("../projecten/FeelingFeedback/feedback.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 60%;
     background-position-y: 50%;
-    background-position-x: 110%;
+    background-position-x: 112%;
 }
 
 #project4 {
-    background-image: url("/projecten/ThigmoGarden/ThigmoGarden.png");
+    background-image: url("../projecten/ThigmoGarden/ThigmoGarden.png");
 
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 50%;
-    background-position-x: 0;
+    background-size: 55%;
+    background-position-x: -5%;
     background-position-y: 50%;
 }
 #project4:hover {
-    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("/projecten/ThigmoGarden/ThigmoGarden.png");
+    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("../projecten/ThigmoGarden/ThigmoGarden.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 60%;
-    background-position-x: -10%;
-    background-position-y: 60%;
+    background-position-x: -12%;
+    background-position-y: 55%;
 }
 
 
