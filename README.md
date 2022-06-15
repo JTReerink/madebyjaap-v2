@@ -6,6 +6,7 @@
 * Onepager
 * background foto van home page random vanuit 'foto's van mij'.
 * Homepage background foto wisselt random na scrollen.
+* Een pijltje naar beneden op homescreen
 * Alle delen van website hebben eigen parallax scrolling background foto.
 * Alle project blokken hebben eigen parallac scrolling background foto.
 * In navigation;
