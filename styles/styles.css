@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 :root{
     --blue: #22577aff;
     --blueRGB: 34, 87, 122, 0.5;
-    --light-blue: #38a3a5ff;
-    --green: #2BFFD1;
+    --light-blue: rgb(31, 143, 145);
+    --green: #80caff;
     --purple: #985f99ff;
     --orange: #fe5f55ff;
+}
+
+* { 
+    font-family: 'Kanit', sans-serif;
 }
 html {
     scroll-behavior: smooth;
@@ -12,11 +17,30 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: black;
+    color: white;
+}
+
+#background {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(0, 94, 161) 100%);
+    position: fixed;
+    z-index: -1;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    color: var(--green);
+}
+a:hover {
+    color: var(--orange);
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 12px;
     background-color: rgba(31, 31, 31);
 }
 ::-webkit-scrollbar-thumb {
@@ -49,6 +73,18 @@ body {
     border-radius: 20px;
     position: fixed;
 }
+
+.sidenav #nav-holder-scroll {
+    display: none;
+    background-color: rgba(var(--blueRGB));
+    right: -20px;
+    padding: 15px 25px 15px 0;
+    border-radius: 20px;
+    position: fixed;
+    flex-direction: column;
+    align-items: space-between;
+}
+
 .sidenav #nav-holder:last-of-type {
     margin-bottom: auto;
 }
@@ -65,10 +101,19 @@ body {
     color: var(--green, #985f99ff);
     display: block;
 } 
+.sidenav #nav-holder-scroll svg {
+    text-align: right;
+    right: 0;
+    padding: 14px 10px 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--green, #985f99ff);
+    display: block;
+} 
 .sidenav a:hover {
     color: var(--orange);
 }
-.sidenav a .dots {
+.sidenav a .dots, #nav-holder-scroll .dots{
     width: 17.5px;
     /* fill: var(--green); */
     fill: none;
@@ -90,14 +135,12 @@ body {
 
 #home {
     height: 100vh;
-    background-color: black;
     align-items: center;
     justify-content: center;
 }
 #home #title {
     position: absolute;
     font-size: 8vw;
-    color: white;
     text-align: center;
     width: 99vw;
     margin-top: 0;
@@ -113,14 +156,12 @@ body {
 
 #about {
     height: 100vh;
-    background-color: gray;
 }
 
 
 /* Projects */
 #projects {
     height: fit-content;
-    background-color: var(--light-blue);
 }
 
 .projectsholder {
@@ -130,35 +171,87 @@ body {
     flex: 0 1 auto;
     flex-wrap: wrap-reverse;
     flex-direction: row-reverse;
+    justify-content: center;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    gap: 0;
 
 }
-.projectItem {
-    position: relative;
+
+.flip-card {
+    background-color: transparent;
     display: flex;
     height: 60vh;
-    width: 49.5vw;
+    width: 45vw;
+    height: 60vh;
+    width: 45vw;
     padding: 0;
-    margin: 0;
-    overflow: hidden;
-    transition: all 1s ease;
+    margin: 20px;
     align-items: flex-end;
-    box-shadow: 0px 0px 15px 6px var(--blue) inset;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
+.flip-card-inner {
+    position: relative;
 
-.projectsholder a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.projectItem, .projectItem-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    
+    
+    
+    background-size: cover;
+    background-position: center;
+}
+
+.flip-card {
     color: var(--green);
-    text-decoration: none;
 }
-.projectsholder a:active {
-    text-decoration: none;
+
+.projectItem-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
 }
-.projectsholder a:visited {
-    text-decoration: none;
+
+.projectsholder .ENG {
+    display: none;
 }
+
+.projectsholder .switch-language {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+    color: white;
+    background-color: rgba(var(--blueRGB));
+    border: none;
+    border-radius: 20px;
+}
+
+.projectsholder .switch-language:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+}
+
 .projectsholder h3 {
     font-size: 2vw;
     background-color: rgba(var(--blueRGB));
@@ -167,76 +260,74 @@ body {
     padding: 8px 10px 20px 20px;
     width: fit-content;
     border-radius: 20px;
-    box-shadow: 3px -2px 10px var(--blue)
+    box-shadow: 2px -1px 8px var(--blue)
 }
 
 
-#project1{
-
-}
-#project1:hover {
-
-}
-#project2 {
+#OAG {
     background-image: url("../projecten/OAG/oag.png");
+}
+#OAG-back {
 
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position-x: 0;
-    background-position-y: 50%;
 }
-#project2:hover {
-    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("../projecten/OAG/oag.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 60%;
-    background-position-y: 50%;
-    background-position-x: -10%;
-}
-#project3 {
+
+#feelingfeedback {
     background-image: url("../projecten/FeelingFeedback/feedback.png");
-
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 52%;
-    background-position-x: 103%;
-    background-position-y: 50%;
 }
-#project3:hover {
-    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("../projecten/FeelingFeedback/feedback.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 58%;
-    background-position-x: 110%;
-    background-position-y: 55%;
+#feelingfeedback-back {
+
 }
 
-#project4 {
+#thigmo {
     background-image: url("../projecten/ThigmoGarden/ThigmoGarden.png");
-
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 55%;
-    background-position-x: -5%;
-    background-position-y: 50%;
 }
-#project4:hover {
-    background: linear-gradient(rgba(var(--blueRGB)), rgba(var(--blueRGB))), url("../projecten/ThigmoGarden/ThigmoGarden.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 60%;
-    background-position-x: -12%;
-    background-position-y: 55%;
+#thigmo-back {
+
 }
 
+/* About */
+#about {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex: 0 1 auto;
+}
+#about p {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 0px 15px;
+    width: 30vw;
+}
+.verticalDevider {
+    width: 5px;
+    border-left: 6px solid var(--purple);
+    height: 500px;
+    justify-self: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
+}
 
+footer {
+    align-items: center;
+}
 
 #contact {
     height: 50vh;
-    background-color: var(--blue);
+    display: inline-block;
+    width: calc(100% - 15px);
+    margin-left: 15px;
 }
+
+
   
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}

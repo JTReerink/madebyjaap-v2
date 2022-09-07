@@ -10,6 +10,7 @@
 </head>
 <body>
     
+    <div id="background"></div>
     <div class="sidenav">
         <div id="title-holder">
             <a href="" id="title">MadeByJaap</a>
@@ -21,32 +22,98 @@
             <a href="#about">About <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg></a>
             <a href="#contact">Contact <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg></a>
         </div>
+        <div id="nav-holder-scroll">
+            <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
+            <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
+            <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
+            <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
+        </div>
     </div>
     
     <div class="sections" id="home">
         <h1 id="title">Jaap Reerink</h1>
-        <p id="subtitle">Student Software Developer</p>
+        <p id="subtitle">Software Development Student</p>
     </div>
 
     <main>
         
         <div class="sections" id="projects">
             <ul class="projectsholder">
-                <a href=""><li class="projectItem" id="project1"><h3>Project 1</h3></li></a>
-                <a href=""><li class="projectItem" id="project2"><h3>Online Adventure Game</h3></li></a>
-                <a href=""><li class="projectItem" id="project3"><h3>Feeling Feedback</h3></li></a>
-                <a href="./projecten/ThigmoGarden"><li class="projectItem" id="project4"><h3>Thigmo Garden</h3></li></a>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <li class="projectItem" id="OAG">
+                        </li>
+                        <div class="projectItem-back" id="OAG-back">
+                            <h3>Online Adventure Game</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <li class="projectItem" id="feelingfeedback">
+                        </li>
+                        <div class="projectItem-back" id="feelingfeedback-back">
+                            <h3>Feeling Feedback</h3>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <li class="projectItem" id="thigmo">
+                        </li>
+                        <div class="projectItem-back" id="thigmo-back">
+                            <h3>Thigmo Garden</h3>
+                            <button class="switch-language" id="switch-language" onclick="SwitchLanguage(this)">English</button>
+                            <p class="NL">
+                                Dit was een project voor de 2e periode van het 2e jaar MediaCollege. 
+                                De opdracht was om een interactieve kunst installatie te maken. 
+                                Hiervoor heb ik gewerkt met NodeMCU's en heb ik een deel van het concept van de website gemaakt.
+                                <a href="./projecten/ThigmoGarden/" target="_blank">Klik hier om de website bekijken (niet af)</a>
+                            </p>
+                            <p class="NL">
+                                <a href="https://github.com/JTReerink/KunstSpeeltuin" target="_blank">Klik hier voor de Github.</a> <br>
+                                <i>Hier vind je meer informatie, foto's en meer.</i>
+                            </p>
+
+                            <p class="ENG">
+                                This was a project for the second period of the second year at MediaCollege.
+                                The assignment was to make an interactive art installation.
+                                For this I worked with NodeMCU's and I partially made the concept website.
+                                <a href="./projecten/ThigmoGarden/" target="_blank">Click here to see the website (not finished)</a>
+                            </p>
+                            <p class="ENG">
+                                <a href="https://github.com/JTReerink/KunstSpeeltuin" target="_blank">Click here for Github (Dutch only)</a> <br>
+                                <i>Here you can find more information, pictures and more</i>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
             </ul>
         </div>
         
         <div class="sections" id="about">
-            <h1>ABOUT</h1>
+            <p style="left: 25%;">
+                Hoi! Ik ben dus Jaap Reerink. Een Software Development student op het &nbsp<a href="https://www.ma-web.nl/opleidingen/opleidingsoverzicht/softwaredeveloper/">MediaCollege Amsterdam</a>.
+            </p>
+            <div class="verticalDevider"></div>
+            <p style="left: 75%;">
+                Hi! So I am Jaap Reerink. A Software Development student at &nbsp<a href="https://www.ma-web.nl/opleidingen/opleidingsoverzicht/softwaredeveloper/">MediaCollege Amsterdam</a>.
+            </p>
         </div>
     </main>
     
     <footer>
         <div class="sections" id="contact">
             <h1>CONTACT</h1>
+            <h3>Email:</h3>
+            <p>
+                jareerink@gmail.com
+            </p>
         </div>
     </footer>
     <script src="./js/script.js"></script>

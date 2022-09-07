@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="Icon" href="../media/Logo_Gradient_MetBloem.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../styles/styles.css">
+    <link rel="stylesheet" media="screen and (max-width: 899px)" href="../styles/mobileStyles.css">
+    <title>Thigmo Garden</title>
+</head>
+<body>
+        
+    <div id="page1">
+        <div id="logo">
+            <a href="./"><img src="../media/Logo_Gradient_MetBloem.svg" alt="LOGO"></a>
+        </div> 
+
+        <nav id="navbar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                <div class="inset-text">&times;</div>
+            </a>
+            <div id="navbar-content">
+                <div id="nav-logo">
+                    <a href="./"><img src="../media/Logo_Gradient_MetBloem.svg" alt="LOGO"></a>
+                </div> 
+                <div id="navbar-mid">
+                    <a href="./">Home</a>
+                    <a href="#page2">About</a>
+                    <a href="../contact">Contact</a>
+                </div>
+                <div id="tickets" onclick="location.href='#page3'">
+                    <a href="#page3" onclick="closeNav()">Plan a visit</a>
+                </div>
+            </div>
+        </nav>
+        <button class="sidenav-button" id="sidenav-button" onclick="openNav()">&#9776;</button>
+
+        <div id="middle">
+            <h1 id="thigmo">Thigmo</h1>
+            <h3 id="showDate">02 FEB&nbsp;<sup>2022</sup></h3>
+            <img src="../media/flowers.png" alt="Flowers" id="flowers">
+            <h1 id="garden">Garden</h1>
+            <p id="mainSubtext">
+                Interactive lighted flower exhibition<br>
+                inspired by Studio Drift
+            </p>
+            <button id="planVisit" onclick="location.href='#page3'">Plan a visit</button>
+        </div>
+
+    </div>
+
+    <div id="page2">
+        <h1>page2</h1>
+
+
+    </div>
+
+    <div id="page3">
+        <h1>page3</h1>
+
+
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

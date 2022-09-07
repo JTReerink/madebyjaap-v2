@@ -1,0 +1,234 @@
+* {
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+  
+/* BACKGROUNDS */
+
+#page1, #page2, #page3 {
+      background-color: black;
+}
+  
+#page1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#page2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    background-color: rgb(26, 26, 26);
+}
+
+#page3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 200%;
+    background-color: rgb(63, 63, 63);
+
+}
+
+
+h1 {
+    font-size: 8.5vw;
+    color: white;
+}
+
+h3 {
+    font-size: 2.7vw;
+    color: white;
+    font-weight: 100;
+}
+
+p {
+    font-size: 1.2vw;
+    color: white;
+}
+
+sup {
+    position: relative;
+    font-size: 50%;
+    top: .3em;
+}
+
+
+/* NAV-BAR */
+#logo {
+    position: fixed;
+    left: 15px;
+    top: 20px;
+    text-align: center;
+    width: 5%;
+    z-index: 7;
+}
+
+#navbar {
+    padding: 15px 10px;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    z-index: 4;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#nav-logo {
+    display: none;
+}
+
+#navbar-mid {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    float: none;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#navbar-mid a {
+    padding: 8px 15px;
+    text-decoration: underline rgba(255,255,255,0);
+    transition: text-decoration-color .5s, color .5s;
+}
+
+#navbar-mid a:hover {
+    text-decoration-color: rgba(254,218,95,1);
+    color: rgb(254,218,95);
+}
+
+#tickets {
+    position: relative;
+    background-image: none;
+    margin-right: 5%;
+    float: right;
+    padding: 10px 45px;
+    border: solid 1px rgb(159,160,253);
+    z-index: 1;
+}
+
+#tickets::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right ,rgb(159,160,253), rgba(137, 208, 255, 0.863));
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+#tickets:hover::before {
+    opacity: 1;
+}
+
+.closebtn {
+  display: none;
+}
+
+.sidenav-button {
+  display: none;
+}
+
+/* END NAV-BAR */
+
+
+
+
+/* PAGE1 INHOUD */
+
+#middle {
+    margin-top: 10%;
+}
+
+#middle #thigmo {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    margin: -1.5% 0 0 13.7%;
+    background: linear-gradient(to right, white 70%, 97%, rgba(255, 255, 255, 0.322));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#middle #showDate {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin: .8% 0 0 -0.5%;
+    z-index: 3;
+}
+
+#middle #garden {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    right: 10%;
+    margin: -21.3% 1.5% 0 0;
+}
+
+#middle #mainSubtext {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    right: 10%;
+    margin: -11% 1.5% 0 0;
+    text-align: end;
+    font-weight: lighter;
+}
+
+/* bloemen */
+#middle #flowers {
+    position: relative;
+    display: flex;
+    margin: auto;
+    width: 35%;
+    margin-top: 8%;
+    z-index: 2;
+}
+
+/* 'plan visit' button */
+#middle #planVisit {
+    position: relative;
+    z-index: 3;
+    left: 50%;
+    margin-top: 0.8%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.253);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 1.5vw;
+    padding: 15px 55px;
+    cursor: pointer;
+    border: solid 0.5px white;
+    transition: padding .5s;
+}
+
+#middle #planVisit:hover {
+    padding: 12px 50px;
+}

@@ -1,0 +1,95 @@
+*{
+    
+    margin: auto;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+#center {
+    position: absolute;
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    bottom: 5%;
+}
+
+/* De bloem */
+#load {
+    position: relative;
+    width: 10em;
+    cursor: pointer;
+}
+
+.countHolder {
+    overflow: hidden;
+    position: relative;
+    border-style: solid white;
+    width: 150px;
+    height: 65px;
+    margin-top: 5%;
+}
+
+.countHolder p {
+    position: absolute;
+    bottom: 10%;
+    margin: 0 50%;
+}
+
+.countHolder img{
+    position: relative;
+    float: left;
+    width: 45px;
+    
+}
+
+.countHolder #eenHeid {
+    bottom: 0;
+    /* margin-top: 1px; */
+    transition: transform 4s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+
+.countHolder #tienTal {
+    bottom: 9px;
+    transition: transform 4s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+#procent {
+    position: absolute;
+    left: 18px;
+    font-size: 50px;
+}
+
+/* Het woord "loading" */
+#loading {
+    visibility: hidden;
+    margin-bottom: 0px;
+}
+
+/* De Cirkel */
+#circle {
+    position: absolute;
+    /* background: white; */
+    height: 200px;
+    width: 200px;
+    top: -3.5em;
+    margin-left: -1.3em;
+}
+
+
+/* @keyframes scrollEen {
+    from    {bottom:0px;}
+    to      {bottom: 675px;}
+}
+
+@keyframes scrollTien {
+    from    {bottom:0px;}
+    to      {bottom: 325px;}
+} */
