@@ -20,9 +20,11 @@
             <a href="#home">Home <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg></a>
             <a href="#projects">Projects <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg></a>
             <a href="#about">About <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg></a>
+            <a href="#blog">Blog <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg></a>
             <a href="#contact">Contact <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg></a>
         </div>
         <div id="nav-holder-scroll">
+            <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
             <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
             <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
             <svg class="dots" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
@@ -33,6 +35,7 @@
     <div class="sections" id="home">
         <h1 id="title">Jaap Reerink</h1>
         <p id="subtitle">Software Development Student</p>
+        <a href="#projects" id="arrow"><img src="./media/arrow-down.svg" class="arrow" alt="Arrow"></a>
     </div>
 
     <main>
@@ -45,7 +48,30 @@
                         </li>
                         <div class="projectItem-back" id="OAG-back">
                             <h3>Online Adventure Game</h3>
-                            
+                            <button class="switch-language" id="switch-language" onclick="SwitchLanguage(this)">English</button>
+                            <p class="NL">
+                                 Dit is een van mijn eerste ervaringen met HTML, CSS en Javascript. Dit project is ontstaan aan het begin van de eerste lockdown.
+                                 <a href="https://www.arjanspannenburg.nl/" target="_blank">Arjan Spannenburg</a> wilde graag iets nieuws waarmee hij zijn volgers/klanten op een leuke manier een kijkje kon geven in zijn werk.
+                                 Ik werd net heel nieuwsgierig in programmeren en beiden werden we fan van online-escaprooms. 
+                                 Zo hadden we bedacht dat ik als mijn eerste project een online-escaperoom zou maken met hem als verhaal. 
+                                <a href="https://spannenburg.art/oag/" target="_blank">Klik hier om het spel te bekijken</a>
+                            </p>
+                            <p class="NL">
+                                <a href="https://github.com/JTReerink/KunstSpeeltuin" target="_blank">Klik hier voor de Github.</a> <br>
+                                <i>Hier vind je meer informatie, foto's en meer.</i>
+                            </p>
+
+                            <p class="ENG">
+                                This is one of my first experiences with HTML, CSS and Javascript. This project came about during the start of the first lockdown. 
+                                <a href="https://www.arjanspannenburg.nl/" target="_blank">Arjan Spannenburg</a> wanted something new with which he could give his followers/customers a peek into his work in a fun way. 
+                                I just became very curious in programming and we both became fans of online escapements. 
+                                So we figured that as my first project I would create an online escaperoom with him as the story.
+                                <a href="https://spannenburg.art/oag/" target="_blank">Click here to see the website (not finished)</a>
+                            </p>
+                            <p class="ENG">
+                                <a href="https://github.com/JTReerink/KunstSpeeltuin" target="_blank">Click here for Github (Dutch only)</a> <br>
+                                <i>Here you can find more information, pictures and more</i>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +82,24 @@
                         </li>
                         <div class="projectItem-back" id="feelingfeedback-back">
                             <h3>Feeling Feedback</h3>
-                            
+                            <button class="switch-language" id="switch-language" onclick="SwitchLanguage(this)">English</button>
+                            <p class="NL">
+                                Feeling feedback text
+                                <a href="./projecten/ThigmoGarden/" target="_blank">Klik hier om de website bekijken (niet af)</a>
+                            </p>
+                            <p class="NL">
+                                <a href="https://github.com/JTReerink/KunstSpeeltuin" target="_blank">Klik hier voor de Github.</a> <br>
+                                <i>Hier vind je meer informatie, foto's en meer.</i>
+                            </p>
+
+                            <p class="ENG">
+                                Feeling feedback text engels
+                                <a href="./projecten/ThigmoGarden/" target="_blank">Click here to see the website (not finished)</a>
+                            </p>
+                            <p class="ENG">
+                                <a href="https://github.com/JTReerink/KunstSpeeltuin" target="_blank">Click here for Github (Dutch only)</a> <br>
+                                <i>Here you can find more information, pictures and more</i>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -98,12 +141,17 @@
         
         <div class="sections" id="about">
             <p style="left: 25%;">
-                Hoi! Ik ben dus Jaap Reerink. Een Software Development student op het &nbsp<a href="https://www.ma-web.nl/opleidingen/opleidingsoverzicht/softwaredeveloper/">MediaCollege Amsterdam</a>.
+                Hoi! Ik ben Jaap Reerink. Een Software Development student op het &nbsp<a href="https://www.ma-web.nl/opleidingen/opleidingsoverzicht/softwaredeveloper/">MediaCollege Amsterdam</a>.
             </p>
             <div class="verticalDevider"></div>
             <p style="left: 75%;">
-                Hi! So I am Jaap Reerink. A Software Development student at &nbsp<a href="https://www.ma-web.nl/opleidingen/opleidingsoverzicht/softwaredeveloper/">MediaCollege Amsterdam</a>.
+                Hi! I am Jaap Reerink. A Software Development student at &nbsp<a href="https://www.ma-web.nl/opleidingen/opleidingsoverzicht/softwaredeveloper/">MediaCollege Amsterdam</a>.
             </p>
+        </div>
+
+        <div id="blog">
+            <iframe src="https://madebyjaap.blogspot.com/" id="blogFrame"></iframe>
+            <a href="https://madebyjaap.blogspot.com/" target="_blank">Klik hier om de blog te openen in een nieuw tabblad</a>
         </div>
     </main>
     
