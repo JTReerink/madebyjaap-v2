@@ -7,12 +7,10 @@
 * background foto van home page random vanuit 'foto's van mij'.
 * Homepage background foto wisselt random na scrollen.
 * Een pijltje naar beneden op homescreen
-* Alle delen van website hebben eigen parallax scrolling background foto.
-* Alle project blokken hebben eigen parallac scrolling background foto.
 * In navigation;
   - Alleen tekst van huidige plek op pagina
   - on hover -> shows text
-* 
+* Mailing button in navbar
 
 ### Colors
 
@@ -26,5 +24,4 @@
 
 Deze portfolio site is geïnspireerd op bestaande portfolio-sites;
 
-* De parallax scrolling met foto's: https://www.byxp.co.uk/ & https://www.thaiphamphotography.com/
 * De side-nav die highlight waar op de pagina je bent: https://www.lenasteinkuehler.com/
