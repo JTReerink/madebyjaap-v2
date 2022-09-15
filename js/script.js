@@ -37,13 +37,16 @@ navHolder.addEventListener("mouseout", () => {
 });
 
 function ShowNav(){
-    document.getElementById("nav-holder").style.display = "block";
-    document.getElementById("nav-holder-scroll").style.display = "none";
+    document.getElementById("sidenav").style.zIndex = "3";
+    document.getElementById("projects").style.zIndex = "0";
+    navHolder.style.display = "block";
+    navHolderScroll.style.display = "none";
 };
 function HideNav() {
     if(!scrolled) return;
-    document.getElementById("nav-holder").style.display = "none";
-    document.getElementById("nav-holder-scroll").style.display = "flex";
+    navHolder.style.display = "none";
+    navHolderScroll.style.display = "flex";
+    document.getElementById("sidenav").style.zIndex = "1";
 }
 
 //language witch
